@@ -1,5 +1,5 @@
 #Database Connector
-host="192.168.0.3" 
-user="root" 
+host="" 
+user="" 
 passwd=""
-db="example"
+db=""
