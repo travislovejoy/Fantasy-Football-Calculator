@@ -3,12 +3,11 @@ include_once("config.php");
  
  $week= $_GET["week"];
  
-// echo $week;
+
  if( isset($_GET['name'] ) ) {
     $id=$_GET['name'];
  
 	if (count($id)>0){
-		//$item=$_GET['item'];
 		$response["success"] = 1;
 		$response{"players"}=array();
 		
