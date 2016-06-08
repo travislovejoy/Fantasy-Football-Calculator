@@ -18,9 +18,9 @@ include_once("config.php");
 			$stats = array();
 			$query=mysqli_query($con,"SELECT * FROM passing_stats WHERE player_id ='$value' AND week='$week'") or die(mysqli_error());;
 			if (mysqli_num_rows($query) > 0) {
-				//$response["players"] = array();
+				
 				while($result=mysqli_fetch_assoc($query)){
-					//$stats = array();
+				
 					
 					$stats["pass_att"] = $result["att"];
 					$stats["pass_comp"] = $result["comp"];
@@ -34,18 +34,18 @@ include_once("config.php");
 			else {
 			// if order is empty then player hasn't played yet or played and didn't record any stats. So set all stats to 0.
 				
-				//$stats["name"] = $value;
+			
 				$stats["pass_att"] = 0;
 				$stats["pass_comp"] = 0;
 				$stats["pass_yards"] = 0;
 				$stats["pass_tds"] = 0;
 		 
-				//$response["passing"]= $stats;
+				
 			}
 			//Rushing Stasts query
 			$query=mysqli_query($con,"SELECT * FROM rushing_stats WHERE player_id ='$value' AND week='$week'") or die(mysqli_error());;
 			if (mysqli_num_rows($query) > 0) {
-				//$response["players"] = array();
+				
 				while($result=mysqli_fetch_assoc($query)){
 					
 					$stats["rush_att"] = $result["att"];
@@ -89,9 +89,9 @@ include_once("config.php");
 			}
 			$query=mysqli_query($con,"SELECT * FROM playerinfo WHERE GSID ='$value'") or die(mysqli_error());;
 			if (mysqli_num_rows($query) > 0) {
-				//$response["players"] = array();
+				
 				while($result=mysqli_fetch_assoc($query)){
-					//$stats = array();
+				
 					$stats["GSID"] = $result["GSID"];
 					$stats["name"] = $result["Name"];
 					$stats["team"] = $result["TEAM"];
