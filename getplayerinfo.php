@@ -18,7 +18,10 @@ if( isset($_GET['id'] ) ) {
 			//Passing Stats Query
 			
 			$stats = array();
-			$query=mysqli_query($con,"SELECT * FROM playerinfo WHERE GSID ='$value' AND TEAM='$team' AND Pos='$pos'") or die(mysqli_error());;
+			$query=mysqli_query($con,"SELECT * 
+					     FROM playerinfo 
+					     WHERE GSID ='$value' AND TEAM='$team' AND Pos='$pos'")
+					     or die(mysqli_error());;
 			if (mysqli_num_rows($query) > 0) {
 				//$response["players"] = array();
 				while($result=mysqli_fetch_assoc($query)){
